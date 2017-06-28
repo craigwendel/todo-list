@@ -14,16 +14,16 @@
       <div class="todo-list">
         <form class="todo-list" action="/complete" method="post">
           {{#todos}}
-          <button type="submit" name="task" value="{{.}}">Mark as complete</button><span>{{.}}</span>
+          <button type="submit" name="id" value="{{id}}">Mark as complete</button><span>{{taskName}}</span>
           <br>
           {{/todos}}
         </form>
       </div>
 
-      <h2>Completed todos</h2>
+      <h2>Completed todos: </h2>
       <div class="completed-todo-list">
         {{#completedTodos}}
-        <h4>{{.}}</h4>
+        <p>{{taskName}}</p>
         {{/completedTodos}}
       </div>
   </body>
